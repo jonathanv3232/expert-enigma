@@ -1,0 +1,37 @@
+median of array of 10: the 5th element
+
+median of array of 5: 3nd element
+
+median of array of size 15? the 8th element (index 7)
+
+we want to find an element that is greater than 7 other elements.
+start by finding m1 in array1 and m2 in array2.
+
+m1 = index 4,5
+m2 = index 3
+
+search for m1 in array2. we know its final index would be 4.5 + index_in_m2
+search for m2 in array1, we know its final index would be 3 + index_in_m1
+if either total index = 7, we are done. if m1 total index > 7, that means that we have to search in array1 from 0..m1. 
+if m1 total index < 7, that means we have to search in array1 from m1..end
+
+if m2 total index < 7... etc
+
+now let m1 = median(0..m1) and m2 = median(0..m2)
+
+
+
+
+
+lets define a function f(x). we are searching for f(x) = y.
+we can do a binary search on the input range of x until we find the value where
+f(x) = y
+
+f(x) would be the number of elements < array[x] in both arrays. costs lg(n) + lg(m) time.
+do a binary search on X range, eliminating half the possibilities at every step. 
+
+lg(a*b) = lg(a) + lg(b). easy example: log(10) + log(100) = 1 + 2 = 3 = log(100 * 10) = log(1000) = 3
+lg(a/b) = lg(a) - lg(b)
+
+
+
