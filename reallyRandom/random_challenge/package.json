@@ -1,0 +1,12 @@
+{
+  "name": "Pizza_Delivery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jonathan vargas",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }, 
+  "scripts": {
+      "tests": "node_modules/.bin/./mocha __tests__/*.test.js"
+  }
+}
